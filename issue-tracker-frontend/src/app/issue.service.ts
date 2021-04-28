@@ -18,7 +18,7 @@ export class IssueService {
     return this.http.get(`${this.url}/issues/${id}`);
   }
 
-  addIssue(title, responsible, description, severity) {
+  addIssue(title: any, responsible: any, description: any, severity: any) {
     const issue = {
       title: title,
       responsible: responsible,
@@ -29,7 +29,7 @@ export class IssueService {
     return this.http.post(`${this.url}/issues/add`, issue);
   }
 
-  updateIssue(id, title, responsible, description, severity, status) {
+  updateIssue(id: any, title: any, responsible: any, description: any, severity: any, status: any) {
     const issue = {
       title: title,
       responsible: responsible,
@@ -41,7 +41,7 @@ export class IssueService {
     return this.http.post(`${this.url}/issues/update/${id}`, issue);
   }
 
-  deleteIssue(id) {
+  deleteIssue(id: any) {
     return this.http.get(`${this.url}/issues/delete/${id}`)
   }
 }
